@@ -1,17 +1,16 @@
-Lab 9: pitch and yaw camera control
+# CSC-4710 Final Project
+The plan is to build a low-poly, PS1/PS2-style 3D space driving game where the
+player drives a vehicle which is similar to a honda fit across a procedurally generated moon
+terrain featuring mini skyscraper cities and robot factories. The player can drive through the
+streets to run over waves of evil robots for points, dodge falling meteors, and use jump pads
+with boost to launch onto skyscraper rooftops for bonus objectives (saving the dogs). The
+project will include a space skybox, a third-person chase camera, standard forward lighting on
+textured low-poly models, and bounding-volume collision detection for the buildings, rooftops,
+and robots.
 
-A space map with a honda fit, moon rock, jump pad, white astronaut dummy, and dog.
-Blinn-Phong lighting and a separate shader for the ground.
-New materials include glossy blue paint, dull gray rock, and orange pad paint.
-The white point light starts at (-2, 2, 2).
-The camera eye stays fixed at (0, 2, -3), among the meshes, initially facing the car.
-Mouse movement updates pitch and yaw. Pitch is limited to -80 to +80 degrees;
-yaw can rotate continuously. The view uses glm::lookAt(eye, eye + direction, up),
-with a unit direction computed from the pitch and yaw angles in radians.
+# Build and run
 
-Build and run
-
-Run these commands from the Lab9 project folder:
+Run these commands from the project folder:
 
 ```sh
 cmake -S . -B build
@@ -19,7 +18,7 @@ cmake --build build
 ./build/P3Base resources
 ```
 
-Controls
+# Controls
 
 Move the mouse: look around (0.1 degree per pixel); move up to look up.
 The cursor is captured so rotation continues beyond the window edges.
@@ -27,14 +26,7 @@ Esc: close the window and release the cursor.
 Q / E: move the point light left / right.
 M: toggle the car paint between light and dark blue.
 
-Mesh without normals
 
-two OBJ meshes without normals:
-
-moonRockNoNormals.obj: the rock at (-7, 1.1, -3), left of the car.
-dogNoNormals.obj: the dog at (1, 0, 4.2), beside the dummy.
-
-The rock was made from the starter sphere; the dog uses the starter dog with
-normal references removed. The honda fit was made using blender.
+The vehicle model was made using blender.
 Space Texture
 https://opengameart.org/content/seamless-space-backgrounds
