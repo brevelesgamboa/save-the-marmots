@@ -1,5 +1,21 @@
+# Build outputs
 build/
+bin/
 x64/
-.vs/
 .deps/
-.vs/code
+
+# IDE / Editor files
+.vs/
+.vscode/
+*.swp
+*~
+.DS_Store
+
+# CMake generated files (in case cmake is run from the root)
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+!FindGfxLibs.cmake
+
